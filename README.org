@@ -22,6 +22,6 @@
     (org-roam-db-autosync-mode 1) ;; need to sync org roam db first
     )
 #+end_src
-- mrds/roam-switch-directory : 在目录之间切换的函数
-- mrds--roam-root-directory : roam 根目录，一般设置成跟 org-roam-directory 一样的路径。
-- mrds--db-cache-path : 每个目录对应一个 db 文件，需要一个目录来存储 缓存db文件
+- ~mrds/roam-switch-directory~  : 在目录之间切换的函数
+- ~mrds--roam-root-directory~  : roam 根目录，一般设置成跟 org-roam-directory 一样的路径。
+- ~mrds--db-cache-path~  : 每个目录对应一个 db 文件，需要一个目录来存储 缓存db文件
