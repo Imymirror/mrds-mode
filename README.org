@@ -11,7 +11,7 @@
 2. 虽然说使用 roam 的理由之一是知识的网状连接，但大部分的笔记是没有联系的，分开放置文件，更聚焦，而且搜索效率更高。
 3. ~org-roam-ui~ 里显示的节点更少，更清晰。
 
-* install
+* Install
 #+begin_src emacs-lisp
   (use-package mrds-mode :straight t
     :straight (:host github :repo "Imymirror/mrds-mode")
