@@ -13,7 +13,7 @@
 
 * Install
 #+begin_src emacs-lisp
-  (use-package mrds-mode :straight t
+  (use-package mrds-mode 
     :straight (:host github :repo "Imymirror/mrds-mode")
     :bind (("C-c n s" . mrds/roam-switch-directory))
     :config
