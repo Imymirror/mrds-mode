@@ -1,0 +1,21 @@
+
+* 这个 package 能干什么？
+主要提供一个函数 ~mrds/roam-switch-directory~ ，用以实现 roam 多目录支持。
+根目录底下可以有多个子目录，子目录下可以有子目录。每个目录对应一个 roam db。使用 ~mrds/roam-switch-directory~ 可以切换到任意子目录下，用以控制 roam 笔记的 ~可见范围~ 。如果切换到根目录下，意味着所有笔记都可见；如果切换到某个子目录下，意味着子目录下的笔记可见，其他目录下的笔记不可见。
+
+* install
+#+begin_src emacs-lisp
+  (use-package mrds-mode :straight t
+    :straight (:host github :repo "Imymirror/mrds-mode")
+    :after org-roam
+    :bind (("C-c n s" . mrds/roam-switch-directory))
+    :config
+    (or mrds--roam-root-directory (setq mrds--roam-root-directory (file-truename "/path/to/roam-root-directory/")))
+    (setq mrds--db-cache-path (file-truename "/path/to/cache-db-directory")))
+#+end_src
+- mrds/roam-switch-directory : 在目录之间切换的函数
+- mrds--roam-root-directory : roam 根目录，一般设置成 org-roam-directory
+- mrds--db-cache-path : 每个目录对应一个 db 文件，需要设置一个路径来存储 缓存db文件 的位置
+
+* usage
+
