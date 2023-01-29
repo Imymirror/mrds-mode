@@ -1,8 +1,8 @@
 ;;  -*- lexical-binding: t; -*-
 
 (defvar mrds--roam-root-directory nil "the root directory of roam")
-(defvar mrds--db-cache-path nil "the path where to put the db file")
-(defvar mrds--roam-current-directory nil "hold the valule when switching to new directory")
+(defvar mrds--db-cache-path nil "path for storing the db files")
+(defvar mrds--roam-current-directory nil "hold the value when switching to a new directory")
 
 (defun mrds/show-current-roam-directory ()
   (interactive)
